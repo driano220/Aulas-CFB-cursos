@@ -1,4 +1,5 @@
 #include<iostream>
+#include<locale.h>
 
 using std::cout;
 using std::cin;
@@ -8,6 +9,10 @@ void soma (int n1, int n2);
 
 int main ()
 {
+    setlocale(LC_ALL,"portuguese");
+
+
+
 
     soma(15,5);
     texto();
