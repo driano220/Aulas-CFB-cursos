@@ -1,7 +1,6 @@
-
-#include <iostream>
-#include <locale.h>
-
+#include<iostream>
+#include<locale.h>
+#include<string.h>
 
 using std::cout;
 using std::cin;
@@ -10,8 +9,8 @@ using std::string;
 
 struct Carro
  {
-  
-  string nome;
+  // são variáveis do struct carro.
+  string nome; 
   int pot;
   string cor;
   int velMax; 
@@ -31,7 +30,7 @@ struct Carro
 
 int main ()
 {
-    setlocale(LC_ALL, "portuguese");
+  setlocale(LC_ALL, "portuguese");
 
   Console ps4; 
 
