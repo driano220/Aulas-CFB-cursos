@@ -10,7 +10,7 @@ struct Carro
  {
   
   string nome;
-  int pot= 1000;
+  int pot;
   string cor;
   int velMax; 
 
@@ -25,8 +25,18 @@ int main ()
 
 
   Carro car_1;
+  cout<<"Qual e a potencia do carro: ";
+  cin>>car_1.pot;
+  cout<<"\n\n";
   
-  cout<<"A potencia do carro e :"<<car_1. pot;   
+  cout<<"Entao, a potencia do carro e :"<<car_1. pot<<"\n\n";   
+
+  cout<<"Qual e o nome do carro: "<<"\n\n";
+  cin>>car_1.nome;
+
+  cout<<" O nome do carro: "<<car_1.nome<<"\n\n";
+
+
 
 
  return 0;
