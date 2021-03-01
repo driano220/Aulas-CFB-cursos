@@ -7,55 +7,96 @@ using std::cin;
 using std::string;
 
 
-struct Carro
+struct Console
  {
-  // são variáveis do struct carro.
+  // são variáveis do struct console.
   string nome; 
-  int pot;
-  string cor;
-  int velMax; 
+  float preco;
+  int ano;
+  int seculo; 
+
+  void insere_carc(string st_nome, float st_preco, int st_ano, int st_seculo) // método da função é insere_carc //TODA FUNÇÃO PARA UM STRUCT DEVE ESTAR DENTRO DO STRUCT
+  {
+     nome=st_nome;
+     preco=st_preco;
+     ano=st_ano;
+     seculo=st_seculo;
 
 
+  }
+  
+    void mostra ()  // método da função é "mostra"
+   {
+      cout<<"\n\nNome ______________:"<<nome;
+      //cout<<"\n\nPreco ______________:"<<preco;
+      cout<<"\n\nano ______________:"<<ano;
+     // cout<<"\n\nseculo ______________:"<<seculo;
+
+
+   }
+  
  }; 
 
- struct Console 
- {
-    string nome_console;
-    float preco;
-    int ano_lancamento;
-    int n_jogos;
-
- };
-
+  
+;
 
 int main ()
 {
   setlocale(LC_ALL, "portuguese");
 
-  Console ps4; 
-
-  Carro car_1;
   
   
-  cout<<"Qual e a potencia do carro: ";
-  cin>>car_1.pot;
   
-  cout<<"\n\n";
+
+
+
+
+
+
+
+
+
+
+  struct Console tipo[2]; //FORMA DE INSERIR ARRAY NA STRUCT
   
-  cout<<"Entao, a potencia do carro e :"<<car_1. pot<<"\n\n";   
+ for( int i=0; i<2; i++)
+ {
+    cout<<" Qual o nome ?\n";
+    cin>>tipo[i].nome;
+    //cout<<" Qual o preco ?\n";
+    //cin>>tipo[i].preco;
+    cout<<" Qual o ano ?\n";
+    cin>>tipo[i].ano;
+    //cout<<" Qual o seculo ?\n";
+    //cin>>tipo[i].seculo;
 
-  cout<<"Qual e o nome do carro: "<<"\n\n";
-  cin>>car_1.nome;
+ }
 
-  cout<<" O nome do carro: "<<car_1.nome<<"\n\n";
+for( int j=0; j<2; j++)
+ {
+  tipo[j].mostra();
 
-    cout<<"Digite o nome do console"<<"\n\n";
-    cin>>ps4.nome_console;
+  
+ }
+ 
+cout<<"\n\n";
+   
+   string nomes;
+   cout<<"Digite um nome de console :";
+   cin>>nomes;
+   
+   for( int i=0; i<2; i++) 
+   if(nomes == tipo[i].nome)
+   {
+    cout<< tipo[i].nome;
+    cout<<tipo[i].ano;
 
-    cout<<"Digite o valor do console";
-    cin>>ps4.preco;
 
-    cout<<"Nome do console e: "<<ps4.nome_console<<", e o preco e: "<<ps4.preco;
+      
+   }
+
+
+    
 
 
 
@@ -64,3 +105,4 @@ int main ()
  return 0;
 
 } 
+
